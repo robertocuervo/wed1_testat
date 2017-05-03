@@ -169,6 +169,16 @@ footer > time {
     float: right;
 }
 
+/* lists */
+dl > dd {
+    margin-left: 1.5rem;
+}
+
+ol > li {
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+}
+
 article > dl > dt {
     color: steelblue;
     font-weight: bold;
@@ -179,12 +189,113 @@ article > dl > dt {
 article > dl > dd {
     margin-left: 2rem;
     display: list-item;
-    list-style-type: square;
+    list-style-type: none;
+}
+
+article dd:before{
+    content: '⌖ ';
 }
 
 article > dl + div {
     margin-top: 1rem;
 }
+
+/* table */
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+}
+
+thead {
+    background:steelblue;
+    color: white;
+    border-top: solid black thin;
+    border-bottom: solid black thin;
+}
+
+th, td {
+    padding: 0.5rem;
+}
+
+tbody > tr > th {
+    text-align: left;
+    font-weight: bold;;
+}
+
+tbody > tr > td {
+    text-align: center;
+}
+
+tr:nth-child(2n) {
+    background: rgb(230, 230, 230);
+    border-top: solid steelblue;
+    border-bottom: solid steelblue;
+}
+
+/* forms */
+label {
+    color: grey;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]), select, textarea {
+    background: rgb(230, 230, 230);
+    border-color: transparent;
+    border-bottom: solid black thin;
+    margin-bottom: 1.5rem;
+}
+
+aside form, aside form input:not([type="file"]):not([type="radio"]):not([type="checkbox"]), textarea, select {
+    width: 100%;
+}
+
+.gender > span {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.verification > label {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+fieldset {
+    padding: 0.5rem;
+    border-color: grey;
+    border-radius: 1%;
+    margin-bottom: 1rem;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):hover,
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):active,
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):focus,
+select:hover, select:active, select:focus, textarea:hover, textarea:active, textarea:focus {
+    color: steelblue;
+    border-bottom: solid steelblue medium;
+}
+
+button {
+    background: darkslateblue;
+    color: white;
+    border-radius: 0.5rem;
+    height: 2rem;
+    padding: 0 1em;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), select {
+    height: 1.8rem;
+}
+
+.search-icon::before {
+    background: url("../../media/icon-search.svg") no-repeat center left;
+    background-size: 1rem 1rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    content: '';
+}
+
 
 #font-size-form {
     float: right;

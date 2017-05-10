@@ -101,7 +101,7 @@ img, video, audio {
 }
 
 iframe {
-    width: 100%;
+    width: 50%;
     height: calc(56.25vw - 2rem);
     border: none;
 }
@@ -192,7 +192,7 @@ article > dl > dd {
     list-style-type: none;
 }
 
-article dd:before{
+article dd:before {
     content: '⌖ ';
 }
 
@@ -208,7 +208,7 @@ table {
 }
 
 thead {
-    background:steelblue;
+    background: steelblue;
     color: white;
     border-top: solid black thin;
     border-bottom: solid black thin;
@@ -295,7 +295,6 @@ input:not([type="radio"]):not([type="checkbox"]), select {
     height: 1rem;
     content: '';
 }
-
 
 #font-size-form {
     float: right;

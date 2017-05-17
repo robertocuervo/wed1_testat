@@ -106,6 +106,10 @@ iframe {
     border: none;
 }
 
+iframe.video {
+    height: calc(100vw - 2rem);
+}
+
 /* text */
 h1 {
     font-size: 3rem;
@@ -130,7 +134,8 @@ h3 {
 
 h3:before {
     counter-increment: h3;
-    content: counter(h3) " "
+    content: counter(h3);
+    margin-right: 2px;
 }
 
 h4 {
@@ -163,6 +168,7 @@ article > footer {
     padding: 0.3rem;
     border: thin dashed;
     margin-top: 1rem;
+
 }
 
 footer > time {
@@ -174,9 +180,9 @@ dl > dd {
     margin-left: 1.5rem;
 }
 
-ol > li {
-    margin-left: 4rem;
-    margin-bottom: 1rem;
+ul > li {
+    margin-left: 1.5rem;
+
 }
 
 article > dl > dt {

@@ -184,6 +184,11 @@ nav ul {
     list-style-type: none;
 }
 
+ol > li {
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+}
+
 .navigationli {
     list-style-type: none;
     margin-left: 1.5rem;

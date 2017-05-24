@@ -159,7 +159,7 @@ a:hover, a:active, a:focus {
 
 small {
     margin-top: 1rem;
-    display: block;
+
 }
 
 article > footer {
@@ -168,7 +168,6 @@ article > footer {
     padding: 0.3rem;
     border: thin dashed;
     margin-top: 1rem;
-
 }
 
 footer > time {

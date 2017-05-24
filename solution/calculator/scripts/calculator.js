@@ -1,8 +1,8 @@
 /**
  * core
  */
-(function () {
-    "use strict";
+/*(function () {
+    "use strict";*/
     var calculatorState = {
         operand1: undefined,
         operand2: undefined,
@@ -65,12 +65,15 @@
      * UI
      */
 
-    function writeOutput(output) {
-        $("#output").html(output);
+    function writeOutput(value) {
+		document.querySelector("#output").innerHTML = value;
+		
+		
+        //$("#output").html(output);
     }
 
-    function writeInput(input) {
-        $("#input").html(input);
+    function writeInput(value) {
+		document.querySelector("#input").innerHTML = value;
     }
 
     function welcomeClickHandler() {
@@ -115,10 +118,24 @@
 
     function initializeClickHandlers() {
         $("button").click(welcomeClickHandler);
-        $(".number").click(numberClickHandler);
+        /*$(".number").click(numberClickHandler);
         $(".operator").click(operatorClickHandler);
         $("#key-\\=").click(equalsClickHandler);
-        $("#key-c").click(clearClickHandler);
+        $("#key-c").click(clearClickHandler);*/
+		//document.getElementbyId('button').addEventListener('click', welcomeClickHandler);
+		var numberElements = document.getElementsByClassName('number');
+		for (var i=0; i < numberElements.length; i++)
+		{
+			numberElements[i].addEventListener('click', numberClickHandler);
+		}
+		var operatorElements = document.getElementsByClassName('operator');
+		for (var i=0; i < operatorElements.length; i++)
+		{
+			operatorElements[i].addEventListener('click', operatorClickHandler);
+		}
+		
+		document.getElementById('key-=').addEventListener('click', equalsClickHandler);
+		document.getElementById('key-c').addEventListener('click', clearClickHandler);
     }
 
     $(function () {
@@ -126,4 +143,4 @@
         initializeClickHandlers();
     });
 
-})();
+//})();
